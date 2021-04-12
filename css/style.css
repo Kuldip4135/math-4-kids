@@ -265,8 +265,8 @@ form input {
   border-bottom: 1px solid #2ab7ca;
   margin: 2rem 0;
   font-family: "Luckiest Guy", cursive;
-  font-size: 2.2rem;
-  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 form input::placeholder {
@@ -274,14 +274,16 @@ form input::placeholder {
 }
 
 form button {
+  display: inline-block;
   padding: 1rem;
   background-color: #2ab7ca;
   color: #fff;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   letter-spacing: 0.5rem;
   cursor: pointer;
   font-family: "Luckiest Guy", cursive;
   transition: all 0.4s ease;
+  margin: 2rem 0;
 }
 
 form button:hover {
