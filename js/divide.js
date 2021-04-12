@@ -8,7 +8,7 @@ hamburgerMenu.addEventListener("click", () => {
 //Quiz Logic
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
-const audio = new Audio("../sound/tom-1.mp3");
+const wrongAnswerAudio = document.querySelector(".audio");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
@@ -60,7 +60,7 @@ checkAnswer(option3);
 function checkAnswer(value) {
   value.addEventListener("click", function () {
     if (value.innerText == answer) generateQuestion();
-    else audio.play();
+    else wrongAnswerAudio.play();
   });
 }
 

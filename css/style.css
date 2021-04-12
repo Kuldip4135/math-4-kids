@@ -315,7 +315,7 @@ form button:focus {
 .quiz-container h1 {
   display: inline;
   padding: 2rem;
-  font-size: clamp(5rem, 10vw, 7rem);
+  font-size: clamp(4rem, 10vw, 7rem);
 }
 
 .answer-container h1 {
@@ -323,7 +323,7 @@ form button:focus {
   color: whitesmoke;
   text-align: center;
   margin-top: 1rem;
-  font-size: clamp(5rem, 10vw, 7rem);
+  font-size: clamp(4rem, 10vw, 7rem);
   border-radius: 0.4rem;
   padding: 1rem;
 }
