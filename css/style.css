@@ -160,12 +160,12 @@ nav {
 }
 
 .hero-section {
-  align-items: center;
+  margin-top: 10rem;
   text-align: center;
 }
 
 .choice-selection h1 {
-  font-size: 4rem;
+  font-size: clamp(3.4rem, 7vw, 5rem);
   letter-spacing: 0.2rem;
 }
 
@@ -183,7 +183,7 @@ nav {
   align-items: center;
   justify-content: center;
   height: 6rem;
-  font-size: 3rem;
+  font-size: clamp(3rem, 2vw, 4rem);
   color: #fff;
   margin: 1rem 0;
   border-radius: 0.4rem;
@@ -258,6 +258,8 @@ nav {
 form {
   display: flex;
   flex-direction: column;
+  width: 60rem;
+  max-width: 30rem;
 }
 
 form input {
@@ -266,9 +268,9 @@ form input {
   padding: 1rem;
   border-radius: 0.4rem 0.4rem 0 0;
   border-bottom: 1px solid #2ab7ca;
+  font-size: 1.6rem;
+  margin-top: 3rem;
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
 }
 
 form input::placeholder {
@@ -276,14 +278,11 @@ form input::placeholder {
 }
 
 form button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
+  display: inline-block;
+  padding: 1rem;
   background-color: #2ab7ca;
   color: #fff;
-  font-size: 2.2rem;
-  letter-spacing: 0.5rem;
+  font-size: 2rem;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   transition: all 0.4s ease;
