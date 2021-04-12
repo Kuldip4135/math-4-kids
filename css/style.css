@@ -1,0 +1,407 @@
+/********************** Global Styles ************************/
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #e6e6e6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/********************** Header Styles ************************/
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  z-index: 9990;
+  background-color: #fe4a49;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand a {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1500;
+  position: relative;
+}
+
+.nav-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fe4a49;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1400;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 650ms;
+}
+
+.active .nav-list {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hamburger-menu {
+  font-size: 2.6rem;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1500;
+}
+
+.hamburger-menu .close-menu {
+  display: none;
+}
+
+.active .open-menu {
+  display: none;
+}
+
+.active .close-menu {
+  display: initial;
+}
+
+.nav-link {
+  display: block;
+  color: #fff;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+  width: 0%;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+}
+
+.nav-item:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+/********************** Hero Styles ************************/
+
+.hero-section,
+.quiz-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section {
+  align-items: center;
+  text-align: center;
+}
+
+.choice-selection h1 {
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.4rem;
+}
+
+.choices-container .choice {
+  padding: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  margin: 1rem 0;
+  border-radius: 0.4rem;
+  transition: all 0.4s ease;
+}
+
+.choices-container .choice:nth-child(1) {
+  background-color: #fe4a49;
+}
+
+.choices-container .choice:nth-child(1):hover {
+  background-color: #e6e6e6;
+  color: #fe4a49;
+}
+
+.choices-container .choice:nth-child(2) {
+  background-color: #2ab7ca;
+}
+
+.choices-container .choice:nth-child(2):hover {
+  background-color: #e6e6e6;
+  color: #2ab7ca;
+}
+
+.choices-container .choice:nth-child(3) {
+  background-color: #fad051;
+}
+
+.choices-container .choice:nth-child(3):hover {
+  background-color: #e6e6e6;
+  color: #fad051;
+}
+
+.choices-container .choice:nth-child(4) {
+  background-color: #daa3a3;
+}
+
+.choices-container .choice:nth-child(4):hover {
+  background-color: #e6e6e6;
+  color: #daa3a3;
+}
+
+/********************** Model Styles ************************/
+
+.model-input.hide-model {
+  transform: scale(0);
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.model-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  transition: all 0.6s ease;
+  z-index: 999999;
+}
+
+.model-content img {
+  max-width: 9rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.4rem 0.4rem 0 0;
+  border-bottom: 1px solid #2ab7ca;
+  margin: 2rem 0;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+}
+
+form input::placeholder {
+  letter-spacing: 0.5rem;
+}
+
+form button {
+  padding: 1rem;
+  background-color: #2ab7ca;
+  color: #fff;
+  font-size: 2.6rem;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+  font-family: "Luckiest Guy", cursive;
+  transition: all 0.4s ease;
+}
+
+form button:hover {
+  color: #2ab7ca;
+  background-color: #e6e6e6;
+}
+
+form button,
+form button:focus {
+  border: none;
+  outline: none;
+}
+
+/********************** Quiz Styles ************************/
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.quiz-container {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 2rem;
+}
+
+.quiz-container h1 {
+  display: inline;
+  padding: 2rem;
+  font-size: clamp(5rem, 10vw, 7rem);
+}
+
+.answer-container h1 {
+  cursor: pointer;
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: clamp(5rem, 10vw, 7rem);
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+#option1 {
+  background-color: #fe4a49;
+  transition: all 0.6s ease;
+}
+
+#option1:hover {
+  color: #fe4a49;
+  background-color: white;
+}
+
+#option2 {
+  background-color: #2ab7ca;
+  transition: all 0.6s ease;
+}
+
+#option2:hover {
+  color: #2ab7ca;
+  background-color: white;
+}
+
+#option3 {
+  background-color: #fed766;
+  transition: all 0.6s ease;
+}
+
+#option3:hover {
+  color: #fed766;
+  background-color: white;
+}
+
+/********************** Responsive Styles ************************/
+
+@media screen and (min-width: 54rem) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: initial;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+
+  .nav-link {
+    font-size: 2.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 80% 20%;
+  }
+
+  .quiz-container {
+    height: 50rem;
+    margin-right: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .answer-container {
+    height: 100%;
+  }
+
+  .answer-container h1 {
+    padding: 3.6rem;
+  }
+}
