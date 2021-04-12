@@ -179,7 +179,10 @@ nav {
 }
 
 .choices-container .choice {
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
   font-size: 3rem;
   color: #fff;
   margin: 1rem 0;
@@ -269,12 +272,14 @@ form input {
 }
 
 form input::placeholder {
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
 }
 
 form button {
-  display: inline-block;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
   background-color: #2ab7ca;
   color: #fff;
   font-size: 2.2rem;
@@ -310,7 +315,10 @@ form button:focus {
   background-color: #fff;
   text-align: center;
   border-radius: 0.4rem;
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
 }
 
 .quiz-container h1 {
@@ -326,7 +334,10 @@ form button:focus {
   margin-top: 1rem;
   font-size: clamp(4rem, 10vw, 7rem);
   border-radius: 0.4rem;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
 }
 
 #option1 {
@@ -403,6 +414,6 @@ form button:focus {
   }
 
   .answer-container h1 {
-    padding: 3.6rem;
+    height: 16rem;
   }
 }
