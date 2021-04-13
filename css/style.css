@@ -68,7 +68,7 @@ nav {
 }
 
 .nav-brand a {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: #fff;
   z-index: 1500;
@@ -98,7 +98,7 @@ nav {
 }
 
 .hamburger-menu {
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -120,7 +120,7 @@ nav {
 .nav-link {
   display: block;
   color: #fff;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -150,7 +150,7 @@ nav {
 /********************** Hero Styles ************************/
 
 .hero-section,
-.quiz-section {
+.table-section .quiz-section {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -159,7 +159,8 @@ nav {
   z-index: 1;
 }
 
-.hero-section {
+.hero-section,
+.table-section {
   margin-top: 10rem;
   text-align: center;
 }
@@ -214,7 +215,7 @@ nav {
 
 .choices-container .choice:nth-child(3):hover {
   background-color: #e6e6e6;
-  color: #fad051;
+  color: #f5c32e;
 }
 
 .choices-container .choice:nth-child(4) {
@@ -224,6 +225,16 @@ nav {
 .choices-container .choice:nth-child(4):hover {
   background-color: #e6e6e6;
   color: #daa3a3;
+}
+
+.choices-container .choice:nth-child(5) {
+  background-color: #63ccda;
+  color: #fff;
+}
+
+.choices-container .choice:nth-child(5):hover {
+  background-color: #e6e6e6;
+  color: #2ab7ca;
 }
 
 /********************** Model Styles ************************/
@@ -255,14 +266,14 @@ nav {
   max-width: 9rem;
 }
 
-form {
+.model-content form {
   display: flex;
   flex-direction: column;
   width: 60rem;
   max-width: 30rem;
 }
 
-form input {
+.model-content form input {
   border: none;
   outline: none;
   padding: 1rem;
@@ -273,11 +284,11 @@ form input {
   font-family: "Poppins", sans-serif;
 }
 
-form input::placeholder {
+.model-content form input::placeholder {
   letter-spacing: 0.1rem;
 }
 
-form button {
+.model-content form button {
   display: inline-block;
   padding: 1rem;
   background-color: #2ab7ca;
@@ -289,13 +300,13 @@ form button {
   margin: 2rem 0;
 }
 
-form button:hover {
+.model-content form button:hover {
   color: #2ab7ca;
   background-color: #e6e6e6;
 }
 
-form button,
-form button:focus {
+.model-content form button,
+.model-content form button:focus {
   border: none;
   outline: none;
 }
@@ -369,9 +380,74 @@ form button:focus {
   background-color: white;
 }
 
+/********************** Table Styles ************************/
+
+.table-section {
+  margin-top: 8rem;
+}
+
+.table-section form {
+  max-width: 40rem;
+  margin: auto auto 5rem;
+}
+
+.table-section form input {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.table-section form button {
+  cursor: pointer;
+  background-color: #2ab7ca;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.table-section form input,
+.table-section form button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+}
+
+.table-section form input:focus,
+.table-section form button:focus {
+  border: none;
+  outline: none;
+}
+
+table {
+  margin: 2rem auto;
+  font-size: 2rem;
+  width: 100%;
+  max-width: 30rem;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid #fff;
+  padding: 1rem;
+  width: 5rem;
+}
+
+table tr {
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #2ab7ca;
+}
+
+table tr:nth-child(odd) {
+  background-color: #b8b4e6;
+}
+
 /********************** Responsive Styles ************************/
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 58rem) {
   .hamburger-menu {
     display: none;
   }

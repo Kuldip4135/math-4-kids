@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Math 4 Kids | Welcome</title>
+    <title>Math 4 Kids | Tables</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/index.js" defer></script>
+    <!-- JS -->
+    <script src="./js/table.js" defer></script>
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/4d129299c7.js"></script>
   </head>
-
   <body>
     <header>
       <div class="container">
@@ -43,48 +43,27 @@
             </li>
 
             <li class="nav-item">
-              <a href="table.html" class="nav-link">Tables</a>
+              <a href="table.html" class="nav-link active">Tables</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!--------------------- Model Section ------------------->
+    <section class="table-section">
+      <form>
+        <input
+          type="tel"
+          required
+          autofocus
+          placeholder="Enter Only Number"
+          id="userInput"
+        />
 
-    <div class="model-input">
-      <div class="model-content">
-        <img src="./images/learning.png" alt="icon" />
-        <form>
-          <input
-            type="text"
-            name="userName"
-            id="userName"
-            placeholder="Enter Your Name"
-            required
-            autofocus
-          />
-          <button type="submit">Let's Start</button>
-        </form>
-      </div>
-    </div>
+        <button type="submit">Generate</button>
+      </form>
 
-    <!--------------------- Quiz Section ------------------->
-
-    <section class="hero-section">
-      <div class="container">
-        <div class="choice-selection">
-          <h1 class="name"></h1>
-
-          <div class="choices-container">
-            <a href="add.html" class="choice">Add</a>
-            <a href="subtract.html" class="choice">Subtract</a>
-            <a href="multiplication.html" class="choice">Multiplication</a>
-            <a href="divide.html" class="choice">Division</a>
-            <a href="table.html" class="choice">Tables</a>
-          </div>
-        </div>
-      </div>
+      <table></table>
     </section>
   </body>
 </html>
