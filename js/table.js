@@ -69,12 +69,6 @@ function generateTable(e) {
 
     <tr>
     <td>${userInput.value}</td>
-    <td>${8}</td>
-    <td>${userInput.value * 8}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
     <td>${9}</td>
     <td>${userInput.value * 9}</td>
     </tr>
