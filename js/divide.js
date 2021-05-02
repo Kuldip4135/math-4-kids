@@ -61,7 +61,10 @@ function checkAnswer(value) {
   value.addEventListener("click", function () {
     if (value.innerText == answer) generateQuestion();
     else {
-      wrongAnswerAudio.play();
+      let utterance = new SpeechSynthesisUtterance(
+        `Oops...Wrong Answer, Try again`
+      );
+      speechSynthesis.speak(utterance);
       document.querySelector("body").classList.add("wrong--answer");
 
       setTimeout(() => {
