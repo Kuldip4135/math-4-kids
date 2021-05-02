@@ -17,6 +17,11 @@ html {
 body {
   overflow-x: hidden;
   background-color: #e6e6e6;
+  transition: all 0.5s ease;
+}
+
+.wrong--answer {
+  background-color: red;
 }
 
 a {

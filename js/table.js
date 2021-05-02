@@ -17,67 +17,74 @@ function generateTable(e) {
     return alert("Only Numbers Are Allowed");
   }
 
-  for (let i = 1; i <= 10; i++) {
-    table.innerHTML = `
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${1}</td>
-    <td>${userInput.value * 1}</td>
-    </tr>
+  let utterance = new SpeechSynthesisUtterance(
+    `Generating table of ${userInput.value} for you`
+  );
+  speechSynthesis.speak(utterance);
 
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${2}</td>
-    <td>${userInput.value * 2}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${3}</td>
-    <td>${userInput.value * 3}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${4}</td>
-    <td>${userInput.value * 4}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${5}</td>
-    <td>${userInput.value * 5}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${6}</td>
-    <td>${userInput.value * 6}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${7}</td>
-    <td>${userInput.value * 7}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${8}</td>
-    <td>${userInput.value * 8}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${9}</td>
-    <td>${userInput.value * 9}</td>
-    </tr>
-
-    <tr>
-    <td>${userInput.value}</td>
-    <td>${10}</td>
-    <td>${userInput.value * 10}</td>
-    </tr>
-    `;
-  }
+  setTimeout(() => {
+    for (let i = 1; i <= 10; i++) {
+      table.innerHTML = `
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${1}</td>
+      <td>${userInput.value * 1}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${2}</td>
+      <td>${userInput.value * 2}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${3}</td>
+      <td>${userInput.value * 3}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${4}</td>
+      <td>${userInput.value * 4}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${5}</td>
+      <td>${userInput.value * 5}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${6}</td>
+      <td>${userInput.value * 6}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${7}</td>
+      <td>${userInput.value * 7}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${8}</td>
+      <td>${userInput.value * 8}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${9}</td>
+      <td>${userInput.value * 9}</td>
+      </tr>
+  
+      <tr>
+      <td>${userInput.value}</td>
+      <td>${10}</td>
+      <td>${userInput.value * 10}</td>
+      </tr>
+      `;
+    }
+  }, 2000);
 }

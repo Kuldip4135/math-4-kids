@@ -51,7 +51,14 @@ checkAnswer(option3);
 function checkAnswer(value) {
   value.addEventListener("click", function () {
     if (value.innerText == answer) generateQuestion();
-    else wrongAnswerAudio.play();
+    else {
+      wrongAnswerAudio.play();
+      document.querySelector("body").classList.add("wrong--answer");
+
+      setTimeout(() => {
+        document.querySelector("body").classList.remove("wrong--answer");
+      }, 1000);
+    }
   });
 }
 
